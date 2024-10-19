@@ -14,7 +14,7 @@ class Run:
             else:
                 print(f"unknown cmd was provided '{args[0]}'")
 
-            gs.exec(gs.RunCmds.help,[],gs.RUN_CMDS)
+                gs.exec(gs.RunCmds.help,[],gs.RUN_CMDS)
             return
         gs.exec(args.pop(0),args,gs.RUN_CMDS)
 
