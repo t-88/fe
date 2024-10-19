@@ -1,5 +1,5 @@
-from cmds.GlobalState import *
-import cmds.GlobalState as gs 
+from GlobalState import *
+import GlobalState as gs 
 
 class Help:
     @staticmethod   

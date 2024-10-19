@@ -1,5 +1,11 @@
 import sys
 from fe import FE 
 
-if __name__ == "__main__":
+def main():
+    FE.init()
+
     FE.exec(sys.argv)
+
+
+if __name__ == "__main__":
+    main()

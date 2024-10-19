@@ -1,15 +1,15 @@
-import cmds.GlobalState as gs 
+import GlobalState as gs 
 import os
 
 class RunList:
     @staticmethod   
     def exec(args : list = []):
-        if not os.path.exists("programs"):
-            with open("programs","w") as _:
+        if not os.path.exists(gs.PROGRAMS_FILE_PATH):
+            with open(gs.PROGRAMS_FILE_PATH,"w") as _:
                 pass
 
         prgs = []
-        with open("programs","r") as f:
+        with open(gs.PROGRAMS_FILE_PATH,"r") as f:
             line  = f.readline()
             if line:
                 program , path = line.split(":")
@@ -18,7 +18,7 @@ class RunList:
         if len(prgs) == 0: 
             print("You dont have any saved programs")
             return
-        print("List programs")
+        print("List Programs")
         for prg in prgs:
             print(" "+ prg[0])
     @staticmethod   

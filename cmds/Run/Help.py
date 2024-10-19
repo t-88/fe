@@ -1,4 +1,4 @@
-import cmds.GlobalState as gs 
+import GlobalState as gs 
 
 
 class RunHelp:

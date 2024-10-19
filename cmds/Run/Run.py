@@ -1,4 +1,4 @@
-import cmds.GlobalState as gs 
+import GlobalState as gs 
 from cmds.Run.Help import RunHelp  
 from cmds.Run.List import RunList  
 from cmds.Run.Add import RunAdd  
