@@ -9,8 +9,8 @@ class AliasAdd:
                 pass
 
         print("Add A Program")
-        cmd = input(" cmd: ")
-        alias = input(" alias: ")
+        cmd = input(" cmd: ").strip()
+        alias = input(" alias: ").strip()
 
         with open(gs.ALIAS_FILE_PATH,"a") as f:
             f.write(cmd + ":" + alias + "\n")

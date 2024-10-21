@@ -10,10 +10,11 @@ class AliasList:
 
         aliases = []
         with open(gs.ALIAS_FILE_PATH,"r") as f:
-            line  = f.readline()
-            if line:
-                cmd , alias = line.split(":")
-                aliases.append((cmd.strip(),alias.strip()))
+            for line in f:
+                if line:
+                    cmd , alias = line.split(":")
+                    aliases.append((cmd.strip(),alias.strip()))
+
 
         if len(aliases) == 0: 
             print("You dont have any saved aliases")

@@ -10,10 +10,10 @@ class RunList:
 
         prgs = []
         with open(gs.PROGRAMS_FILE_PATH,"r") as f:
-            line  = f.readline()
-            if line:
-                program , path = line.split(":")
-                prgs.append((program,path))
+            for line in f:
+                if line:
+                    program , path = line.split(":")
+                    prgs.append((program,path))         
 
         if len(prgs) == 0: 
             print("You dont have any saved programs")

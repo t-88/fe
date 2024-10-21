@@ -39,10 +39,10 @@ class Alias:
 
         aliases = []    
         with open(gs.ALIAS_FILE_PATH,"r") as f:
-            line  = f.readline()
-            if line:
-                cmd , alias = line.split(":")
-                aliases.append((cmd.strip(),alias.strip()))
-                if aliases[-1][1] == searched:
-                    return (True,cmd)
+            for line in f:
+                if line:
+                    cmd , alias = line.split(":")
+                    aliases.append((cmd.strip(),alias.strip()))
+                    if aliases[-1][1] == searched:
+                        return (True,cmd)
         return (False,"")
