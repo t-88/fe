@@ -13,11 +13,13 @@ class AliasRemove:
         lines = ""
         found = False
         with open(gs.ALIAS_FILE_PATH,"r") as f:
-            line  = f.readline()
-            if not line.find(alias):
-                found = True
-                lines += line + "\n"
-        lines.strip()
+            for line in f:
+                if line.split(":")[1].strip() != alias:
+                    lines += line 
+                else:
+                    found = True
+
+        lines = lines.strip()
         with open(gs.ALIAS_FILE_PATH,"w") as f:
             f.write(lines)
 
