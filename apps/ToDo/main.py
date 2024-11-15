@@ -1,15 +1,19 @@
-class Renderer:
-    text_style_map = {
-        "bold" : "ESC[22m",
-        "light" : "ESC[22m	",
-        "italic" : "ESC[23m",
-    }
-
-    @staticmethod
-    def print(text,style = ""):
-        print(style,end="")
-        print(text)
+import rich
 
 
-renderer =  Renderer
-renderer.print("UR MOM","\x1b[1")
+print("TODO: ")
+while True:
+    print(">> ",end="")
+    cmd = input().strip()
+    args = ""
+    if len(cmd.split(" ")) != 1:
+        cmd , args = cmd.split(" ")
+
+    if cmd == "add":
+        todo = input(" Add >> ")
+    elif cmd == "list":
+        pass
+    elif cmd == "tags":
+        pass
+    elif cmd == "exit":
+        break

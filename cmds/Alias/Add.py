@@ -16,7 +16,7 @@ class AliasAdd:
 
 
         with open(gs.ALIAS_FILE_PATH,"a") as f:
-            f.write(cmd + ":" + alias + "\n")
+            f.write(f"\n{cmd}:{alias}")
     @staticmethod   
     def docs():
         return "adds a program into the runable programs list"    

@@ -12,7 +12,9 @@ class AliasList:
         with open(gs.ALIAS_FILE_PATH,"r") as f:
             for line in f:
                 if line:
-                    cmd , alias = line.split(":")
+                    last_found = line.rfind(":")
+                    cmd = line[:last_found]
+                    alias = line[last_found + 1:]
                     aliases.append((cmd.strip(),alias.strip()))
 
 

@@ -16,7 +16,7 @@ class FE:
         elif cmd[0] not in gs.CMDS:
             (is_alias, prg) = Alias.check_alias(cmd[0]) 
             if is_alias:
-                os.system(prg + " " +"".join(cmd[1:]))
+                os.system(prg + " " +" ".join(cmd[1:]))
                 return             
 
             print(f"unknown cmd was provided '{cmd[0]}'")
